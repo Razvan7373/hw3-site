@@ -1,0 +1,207 @@
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #4f46e5;
+    color: white;
+    padding: 10px 20px;
+    z-index: 9999;
+    transition: top 0.2s;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #ffde59;
+}
+
+.portfolio-page #main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.portfolio-page fieldset {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-page legend {
+    font-weight: 700;
+    padding: 0 15px;
+    color: #1e1b4b;
+    font-size: 1.15rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+}
+
+.form-group input.invalid, 
+.form-group textarea.invalid, 
+.form-group select.invalid {
+    border-color: #dc2626;
+    background-color: #fef2f2;
+}
+
+.error-msg {
+    color: #dc2626;
+    font-size: 0.85rem;
+    font-weight: 500;
+    min-height: 18px;
+    display: block;
+    margin-top: 4px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.portfolio-page button {
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-submit {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #4338ca;
+}
+
+.btn-reset {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+.btn-reset:hover {
+    background-color: #e5e7eb;
+}
+
+.portfolio-page button:focus {
+    outline: 3px solid #ffde59;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+}
+
+#projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+#projects-table caption {
+    padding: 14px;
+    font-weight: 600;
+    color: #6b7280;
+    font-size: 0.85rem;
+    text-align: left;
+    background: #f9fafb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#projects-table th, 
+#projects-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#projects-table th {
+    background-color: #f3f4f6;
+    color: #1e1b4b;
+    font-weight: 700;
+}
+
+#projects-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+#projects-table a {
+    color: #4f46e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#projects-table a:hover {
+    text-decoration: underline;
+}
+
+.table-thumb {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .portfolio-page #main-content {
+        margin: 20px auto;
+        gap: 35px;
+    }
+    .portfolio-page fieldset {
+        padding: 20px;
+    }
+    .form-buttons {
+        flex-direction: column;
+    }
+    .portfolio-page button {
+        width: 100%;
+    }
+}

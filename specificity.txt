@@ -1,0 +1,10 @@
+Paragraph A gets the proprieties from the "p" element selector,gray color,font size 1rem,font family:Georgia,serif,line height:1.4,padding:4px 0.
+Paragraph B gets the proprieties from the class selector,the "info" class,the steel blue color,1.25rem font size,light blue background color,padding 8px 14px,border-left:5px,solid and steel blue color and font family:Arial,sans-serif;
+Paragraph C gets the proprieties from the id selector,the "warning" id,dark red color,font size 0.8 rem,font style italic,uppercase letters,the letter spacing 0.15em,the border 2px dashed and dark red,10px padding,light red background and font family:Courier New ,monospace
+Paragraph D  gets the proprieties from the class and id selector #warning.info it gets the color,background,font size,border,font style,spacing, and the rest it gets from the warning id,the info class and the "p" element selector,in this order 
+respectively.
+
+
+Paragraph D gets the color from #warning.info because the Paragraph D has both the info class attribute and the warning id attribute and because of the specifity score,#warning.info wins as it is both a class and an id,but because #warning.info doesn't specify a font family,paragraph d gets the font family from the warning id,because it has a higher priority.
+
+The h1 title gets the color from the internal css,because even though they have the same specifity score,the internal css is specified last in the code,so the browser reads that as the corresponding color.If we were to invert the places of the external css and the internal css,the color would change.

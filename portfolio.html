@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofoliu Proiecte - Ranga Razvan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body class="portfolio-page">
+    <a href="#main-content" class="skip-link">Sari la conținutul principal</a>
+
+    <header>
+        <h1>Portfoliu</h1>
+        <nav aria-label="Navigație Principală">
+            <ul>
+                 <li><a href="index.html">Acasă</a></li>
+                 <li><a href="about.html">Despre Mine</a></li>
+                 <li><a href="data.html">Tehnologii</a></li>
+                 <li><a href="contact.html">Contact</a></li>
+                 <li><a href="overview.html">Overview</a></li>
+                 <li><a href="chatbot.html">Chatbot</a></li>
+                 <li><a href="portfolio.html">Portofoliu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="form-section">
+            <h2>Adaugă un Proiect Nou</h2>
+            <form id="project-form" novalidate>
+                <fieldset>
+                    <legend>Detalii Tehnice Proiect</legend>
+                    
+                    <div class="form-group">
+                        <label for="proj-name">Nume Proiect:</label>
+                        <input type="text" id="proj-name" aria-describedby="err-name" required>
+                        <span class="error-msg" id="err-name" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proj-desc">Descriere Detaliată:</label>
+                        <textarea id="proj-desc" rows="4" aria-describedby="err-desc" required></textarea>
+                        <span class="error-msg" id="err-desc" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proj-url">URL Link Proiect:</label>
+                        <input type="url" id="proj-url" placeholder="https://github.com/..." aria-describedby="err-url" required>
+                        <span class="error-msg" id="err-url" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proj-tech">Tehnologie Principală:</label>
+                        <select id="proj-tech" aria-describedby="err-tech" required>
+                            <option value="">-- Selectează --</option>
+                            <option value="HTML5 / CSS3">HTML5 / CSS3</option>
+                            <option value="JavaScript (Vanilla)">JavaScript (Vanilla)</option>
+                            <option value="Grid & Flexbox">Grid & Flexbox</option>
+                            <option value="PHP / MySQL">PHP / MySQL</option>
+                        </select>
+                        <span class="error-msg" id="err-tech" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proj-img">URL Imagine Thumbnail:</label>
+                        <input type="url" id="proj-img" placeholder="https://picsum.photos/100" aria-describedby="err-img" required>
+                        <span class="error-msg" id="err-img" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proj-date">Data Finalizării:</label>
+                        <input type="date" id="proj-date" aria-describedby="err-date" required>
+                        <span class="error-msg" id="err-date" aria-live="assertive"></span>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-submit">Salvează în Tabel</button>
+                        <button type="reset" class="btn-reset">Resetează Câmpurile</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Gestiune și Listă Proiecte Realizate</h2>
+            <div class="table-wrapper">
+                <table id="projects-table">
+                    <caption>Centralizator proiecte web de la restul site-ului și module noi</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Miniatură</th>
+                            <th scope="col">Nume Proiect</th>
+                            <th scope="col">Descriere</th>
+                            <th scope="col">Tehnologie</th>
+                            <th scope="col">Link de Acces</th>
+                            <th scope="col">Data Finalizării</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="https://picsum.photos/id/101/100" alt="Thumbnail Index" class="table-thumb" loading="lazy"></td>
+                            <td><strong>Pagina Principală & CV</strong></td>
+                            <td>Structura de bază a site-ului personal, prezentarea profilului de student și navigația semantică.</td>
+                            <td>HTML5 / CSS3</td>
+                            <td><a href="index.html">Deschide Pagina</a></td>
+                            <td>2026-03-10</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://picsum.photos/id/119/100" alt="Thumbnail Tehnologii" class="table-thumb" loading="lazy"></td>
+                            <td><strong>Dashboard Tehnologii (Data)</strong></td>
+                            <td>Prezentarea structurată a skill-urilor tehnice, utilizând un layout avansat bazat pe CSS Grid.</td>
+                            <td>Grid & Flexbox</td>
+                            <td><a href="data.html">Deschide Pagina</a></td>
+                            <td>2026-03-24</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://picsum.photos/id/160/100" alt="Thumbnail Chatbot" class="table-thumb" loading="lazy"></td>
+                            <td><strong>Chatbot Interactiv</strong></td>
+                            <td>Asistent virtual capabil să răspundă la întrebări prin manipularea dinamică a DOM-ului din JavaScript.</td>
+                            <td>JavaScript (Vanilla)</td>
+                            <td><a href="chatbot.html">Deschide Chatbot</a></td>
+                            <td>2026-04-12</td>
+                        </tr>
+                        <tr>
+                            <td><img src="https://picsum.photos/id/201/100" alt="Thumbnail Contact" class="table-thumb" loading="lazy"></td>
+                            <td><strong>Formular de Contact</strong></td>
+                            <td>Modul de contact integrat pentru transmiterea mesajelor și securizarea legăturilor externe.</td>
+                            <td>HTML5 / CSS3</td>
+                            <td><a href="contact.html">Deschide Pagina</a></td>
+                            <td>2026-04-18</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ranga Razvan - Universitatea de Vest din Timișoara</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
